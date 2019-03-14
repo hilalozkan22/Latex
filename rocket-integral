@@ -1,0 +1,146 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+%opening
+\title{Rocket Integral}
+\author{Hilal Özkan}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+İlk \LaTeX \, çalışmam, ve yükselen bir Roket hesabı içeren bir yazı.
+
+\end{abstract}
+
+
+ \section{Soru} 
+ 
+ 
+ Gerçek bir roketin yüksekliği ne olur?
+
+\section{Sorudaki Değişkenler}
+
+
+
+ R = Roketin boş kütlesi
+
+ Y = Yakıtın kütlesi
+
+ T = Yakıtı tüketme vakti
+
+ G = İtme kuvveti
+
+ g = Yerçekimi ivmesi
+
+ t = Zaman
+
+\section{Roketin Kütlesi}
+
+İlk olarak t kullanılan bir fonksiyon olarak roketin kütlesi nedir sorusunu yanıtlayacağız.
+
+
+Roketin kütlesi boş kütle artı yakıttır. t = 0 olunca yakıtın hepsi var demektir , t  = T olunca yakıtın hepsi tüketilmiştir demektir. Lineer bir süreç olduğu için yakıtın tüketilmiş bölüntüsü t/T olur . Dolayısıyla yakıtın kalan bölüntüsü  (1 - t/T)' dir.  Dolayısıyla roketin toplam kütlesi R + Y ( 1 - t/T ) olur.
+
+\[ R + Y ( 1 - \frac{t}{T} )\]
+
+\section{Roketin İvmesi}
+
+Roket üzerindeki kuvvetler : 
+
+İtme Kuvveti 
+
+Yerçekimi ivmesi 
+
+Roketin ağırlığı
+
+Bu kuvvetlerden yola çıkarak roketin ivmesini veren formülü bulabiliriz.
+
+\[
+ m.a = G - m.g
+\]
+
+
+Bu formülde bulduğumuz kütle formülünü m yerine koyarsak ve a' yı yalnız bırakırsak ivme formülünü elde ederiz.
+
+
+\[
+a = \frac {G - [ R + Y ( 1 - \frac{t}{T} ) ].g }{R + Y ( 1 - \frac{t}{T})}
+\]
+
+
+\section{Roketin Hızı}
+
+İvme sabit olmadığı için yani değişken olduğu için ivmemizi        a= V/t eşitliğinden hesaplayamayız.
+
+
+Bu yüzden integral kullanarak hesaplayabiliriz :
+
+\[
+ V(t) = \int_0^t a(t)dt 
+\]
+
+Bu formülde bulduklarımızı yerine koyarsak :
+
+\[
+ V(t) = \int_0^t\frac{G - [R + Y (1 - \frac{t}{T})].g}{R + Y (1 - \frac{t}{T} )}dt
+\]
+
+
+Formülünü hesaplarız.
+
+Not :\[
+      0 <= t <= T  
+     \]
+     \[
+      g > 0 
+     \]
+     \[
+      G > 0 
+     \]
+     \[
+      R > 0 
+     \]
+     \[
+      T > 0 
+     \]
+     \[
+      Y > 0
+     \]
+
+
+
+   olur.
+
+\section{Değişken Değiştirme}
+
+ \[
+  t' = 1 - \frac{t}{T}
+ \]
+ 
+    Değişken değiştirmesini yaparsak;
+    
+\section{}
+
+Değişken değiştirdikten sonra,
+
+\[
+ V(t) = \int_0^t\frac{p-qt'}{r-st'} dt' = \int_0^t\frac{p}{r-st'} dt' - q \int_0^t\frac{t'}{r-st'} dt'
+\]
+
+\[ 
+ = p\int_0^t\frac{1}{r-st'} dt' - q \int_0^t\frac{t'}{r-st'}dt'
+\]
+
+\[ 
+ = p\int_0^t\frac{1}{r-st'} dt' +q \int_0^t\frac{1}{s} dt' -\frac{qr}{s}\int_0^t\frac{1}{r-st'} dt'
+\]
+
+\[
+ = \frac{q}{s}\int_0^t{1}dt' + \frac{ps-qr}{s}\int_0^t\frac{1}{r-st'} dt'
+\]
+
+
+\end{document}
