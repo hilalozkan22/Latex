@@ -107,7 +107,7 @@ Not :
 \section{Değişken Değiştirme}
 
  \[
-  t' = 1 - \frac{t}{T}
+  t_1 = 1 - \frac{t}{T}
  \]
  
     Değişken değiştirmesini yaparsak;
@@ -117,19 +117,19 @@ Not :
 Değişken değiştirdikten sonra,
 
 \[
- V(t) = \int_0^t\frac{p-qt'}{r-st'} dt' = \int_0^t\frac{p}{r-st'} dt' - q \int_0^t\frac{t'}{r-st'} dt'
+ V(t) = \int_0^1\frac{p-qt_1}{r-st_1} dt_1 = \int_0^1\frac{p}{r-st_1} dt_1 - q \int_0^1\frac{t_1}{r-st_1} dt_1
 \]
 
 \[ 
- = p\int_0^t\frac{1}{r-st'} dt' - q \int_0^t\frac{t'}{r-st'}dt'
+ = p\int_0^1\frac{1}{r-st_1} dt_1 - q \int_0^1\frac{t_1}{r-st_1}dt_1
 \]
 
 \[ 
- = p\int_0^t\frac{1}{r-st'} dt' +q \int_0^t\frac{1}{s} dt' -\frac{qr}{s}\int_0^t\frac{1}{r-st'} dt'
+ = p\int_0^1\frac{1}{r-st_1} dt_1 +q \int_0^1\frac{1}{s} dt_1 -\frac{qr}{s}\int_0^1\frac{1}{r-st_1} dt_1
 \]
 
 \[
- = \frac{q}{s}\int_0^t{1}dt' + \frac{ps-qr}{s}\int_0^t\frac{1}{r-st'} dt'
+ = \frac{q}{s}\int_0^1{1}dt_1 + \frac{ps-qr}{s}\int_0^1\frac{1}{r-st_1} dt_1
 \]
 
 
