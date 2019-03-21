@@ -35,22 +35,26 @@
 
 \section{Roketin Kütlesi}
 
-İlk olarak t kullanılan bir fonksiyon olarak roketin kütlesi nedir sorusunu yanıtlayacağız.
+  İlk olarak t kullanılan bir fonksiyon olarak roketin kütlesi nedir sorusunu yanıtlayacağız.
 
 
 Roketin kütlesi boş kütle artı yakıttır. t = 0 olunca yakıtın hepsi var demektir , t  = T olunca yakıtın hepsi tüketilmiştir demektir. Lineer bir süreç olduğu için yakıtın tüketilmiş bölüntüsü t/T olur . Dolayısıyla yakıtın kalan bölüntüsü  (1 - t/T)' dir.  Dolayısıyla roketin toplam kütlesi R + Y ( 1 - t/T ) olur.
 
 \[ R + Y ( 1 - \frac{t}{T} )\]
 
+
 \section{Roketin İvmesi}
 
 Roket üzerindeki kuvvetler : 
 
-İtme Kuvveti 
+\begin{itemize}
+\item $1$ . İtme kuvveti
+  
+\item $2$ . Yerçekimi ivmesi 
 
-Yerçekimi ivmesi 
+\item $3$ .  Roketin ağırlığı
 
-Roketin ağırlığı
+\end{itemize}
 
 Bu kuvvetlerden yola çıkarak roketin ivmesini veren formülü bulabiliriz.
 
@@ -69,7 +73,7 @@ a = \frac {G - [ R + Y ( 1 - \frac{t}{T} ) ].g }{R + Y ( 1 - \frac{t}{T})}
 
 \section{Roketin Hızı}
 
-İvme sabit olmadığı için yani değişken olduğu için ivmemizi        a= V/t eşitliğinden hesaplayamayız.
+İvme sabit olmadığı için yani değişken olduğu için ivmemizi a= V/t eşitliğinden hesaplayamayız.
 
 
 Bu yüzden integral kullanarak hesaplayabiliriz :
@@ -87,33 +91,23 @@ Bu formülde bulduklarımızı yerine koyarsak :
 
 Formülünü hesaplarız.
 
-Not :\[
-      0 <= t <= T  
-     \]
-     \[
-      g > 0 
-     \]
-     \[
-      G > 0 
-     \]
-     \[
-      R > 0 
-     \]
-     \[
-      T > 0 
-     \]
-     \[
-      Y > 0
-     \]
+Not :
+ \begin{itemize}
+  \item $1$ - \[0 <= t <= T\]
+  \item $2$ - \[ g > 0\]
+  \item $3$ - \[G > 0 \]
+  \item $4$ - \[R > 0 \]
+  \item $5$ - \[T > 0 \]
+  \item $6$ - \[Y > 0\]
 
-
-
-   olur.
+  \end{itemize}
+    
+    olur.
 
 \section{Değişken Değiştirme}
 
  \[
-  t' = 1 - \frac{t}{T}
+  t_1 = 1 - \frac{t}{T}
  \]
  
     Değişken değiştirmesini yaparsak;
@@ -123,19 +117,19 @@ Not :\[
 Değişken değiştirdikten sonra,
 
 \[
- V(t) = \int_0^t\frac{p-qt'}{r-st'} dt' = \int_0^t\frac{p}{r-st'} dt' - q \int_0^t\frac{t'}{r-st'} dt'
+ V(t) = \int_0^1\frac{p-qt_1}{r-st_1} dt_1 = \int_0^1\frac{p}{r-st_1} dt_1 - q \int_0^1\frac{t_1}{r-st_1} dt_1
 \]
 
 \[ 
- = p\int_0^t\frac{1}{r-st'} dt' - q \int_0^t\frac{t'}{r-st'}dt'
+ = p\int_0^1\frac{1}{r-st_1} dt_1 - q \int_0^1\frac{t_1}{r-st_1}dt_1
 \]
 
 \[ 
- = p\int_0^t\frac{1}{r-st'} dt' +q \int_0^t\frac{1}{s} dt' -\frac{qr}{s}\int_0^t\frac{1}{r-st'} dt'
+ = p\int_0^1\frac{1}{r-st_1} dt_1 +q \int_0^1\frac{1}{s} dt_1 -\frac{qr}{s}\int_0^1\frac{1}{r-st_1} dt_1
 \]
 
 \[
- = \frac{q}{s}\int_0^t{1}dt' + \frac{ps-qr}{s}\int_0^t\frac{1}{r-st'} dt'
+ = \frac{q}{s}\int_0^1{1}dt_1 + \frac{ps-qr}{s}\int_0^1\frac{1}{r-st_1} dt_1
 \]
 
 
