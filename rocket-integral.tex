@@ -117,20 +117,62 @@ Not :
 Değişken değiştirdikten sonra,
 
 \[
- V(t) = \int_0^1\frac{p-qt_1}{r-st_1} dt_1 = \int_0^1\frac{p}{r-st_1} dt_1 - q \int_0^1\frac{t_1}{r-st_1} dt_1
+ V(t) = \int_1^{1-\frac{t}{T}}\frac{p-qt_1}{r-st_1} dt_1 = \int_1^{1-\frac{t}{T}}\frac{p}{r-st_1} dt_1 - q \int_1^{1-\frac{t}{T}}\frac{t_1}{r-st_1} dt_1
 \]
 
 \[ 
- = p\int_0^1\frac{1}{r-st_1} dt_1 - q \int_0^1\frac{t_1}{r-st_1}dt_1
+ = p\int_1^{1-\frac{t}{T}}\frac{1}{r-st_1} dt_1 - q \int_1^{1-\frac{t}{T}}\frac{t_1}{r-st_1}dt_1
 \]
 
 \[ 
- = p\int_0^1\frac{1}{r-st_1} dt_1 +q \int_0^1\frac{1}{s} dt_1 -\frac{qr}{s}\int_0^1\frac{1}{r-st_1} dt_1
+ = p\int_1^{1-\frac{t}{T}}\frac{1}{r-st_1} dt_1 +q \int_1^{1-\frac{t}{T}}\frac{1}{s} dt_1 -\frac{qr}{s}\int_1^{1-\frac{t}{T}}\frac{1}{r-st_1} dt_1
 \]
 
 \[
- = \frac{q}{s}\int_0^1{1}dt_1 + \frac{ps-qr}{s}\int_0^1\frac{1}{r-st_1} dt_1
+ = \frac{q}{s}\int_1^{1-\frac{t}{T}}{1}dt_1 + \frac{ps-qr}{s}\int_1^{1-\frac{t}{T}}\frac{1}{r-st_1} dt_1
 \]
 
+\section{}
 
+\[
+\frac{ps-qr}{s}\int_1^{1-\frac{t}{T}}\frac{1}{r-st_1} dt_1
+\]
+
+İntegrali için de değişken değiştirmesini yaparsak,
+\[
+ t_2 = r-st_1
+ \]
+ \[
+ t_1 = \frac{r}{s} - \frac{t_2}{s}
+\]
+\[
+ dt_1 = - \frac{1}{s}dt_2
+\]
+
+Değişken değiştirmesinden sonra,
+
+\[
+ -(\frac{ps-qr}{s^2})\int_{r-s}^{r-s{(1-\frac{t}{T}})}\frac{1}{t_2}dt_2
+\]
+
+\section{}
+Bulduğumuz integrali çözelim,
+
+\[
+ -(\frac{ps-qr}{s^2})\int_{r-s}^{r-s{(1-\frac{t}{T}})} \frac{1}{t_2}dt_2  = -(\frac{ps-qr}{s^2})[\ln{|{r-s{(1-\frac{t}{T}})}|} - \ln{|r-s|}]
+ \]
+\[
+ = -(\frac{ps-qr}{s^2})[\ln|{\frac{r-s+\frac{st}{T}}{r-s}}|]
+\]
+\[
+ = -(\frac{ps-qr}{s^2})[\ln|1 + \frac{st}{T(r-s)}|]
+\]
+
+\section{Roketin Hızı}
+  Çözdüğümüz integralde değişkenlerin değerlerini yerine koyarsak roketin hızına ulaşırız. 
+  
+\[
+ V(t) =  -(\frac{ps-qr}{s^2})[\ln|1 + \frac{st}{T(r-s)}|]
+\]
 \end{document}
+
