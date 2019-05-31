@@ -174,5 +174,70 @@ Bulduğumuz integrali çözelim,
 \[
  V(t) =  -(\frac{ps-qr}{s^2})[\ln|1 + \frac{st}{T(r-s)}|]
 \]
+\section{Roketin Yüksekliği}
+\[ x(t) = \int_{0}^{t}{V(t)}dt
+\]
+
+ Formülünde hızın yerine bulduğumuz çözümü yazıp integralini alırsak roketin yüksekliğine ulaşırız.
+
+ \[
+ x(t) = \int_{0}^{t}-(\frac{ps-qr}{s^2})[\ln|1 + \frac{st}{T(r-s)}|]dt
+ \]
+ 
+ Düzenlersek,
+ 
+ \[
+ x(t) = -(\frac{ps-qr}{s^2})\int_{0}^{t}[\ln|1 + \frac{st}{T(r-s)}|]dt
+ \]
+ 
+  ln fonksiyonunun integralini almak için kısmi türevden yararlanacağız.
+ 
+ \section{Kısmi Türev}
+ 
+\[
+ uv - \int vdu
+\]
+
+Formülüne göre değişken değiştirmesi yaparsak,
+
+\[
+ u = ln|1 + \frac{st}{T(r-s)}|
+\]
+
+\[
+ du = \frac{s}{T(r-s) + st}dt
+\]
+
+\[
+ dv = dt
+\]
+
+\[
+ v = t
+\]
+
+Değişken değiştirdikten sonra,
+
+\[
+ tln|1 + \frac{st}{T(r-s)}| - \int_{0}^{t}\frac{st}{T(r-s) + st}dt
+\]
+
+Yazdığımız ifadeki integralin çözümü,
+
+\[
+   \int_{0}^{t}\frac{st + T(r-s) - T(r-s)}{T(r-s) + st}dt = \int_{0}^{t}( 1 -\frac{T(r-s)}{T(r-s) + st})dt
+\]
+\[
+ = t - \frac{T(r-s)ln|{T(r-s) + st}|}{s} =  \frac{st -T(r-s)ln|{T(r-s) + st}|}{s}
+\]
+
+Bulduğumuz cevabı düzenlersek,
+
+\[x(t) =  -(\frac{ps-qr}{s^2})(tln|1 + \frac{st}{T(r-s)}| - \frac{st -T(r-s)ln|{T(r-s) + st}|}{s})
+\]
+
+Değişkenlerin değerlerini yerine koyarsak roketin yüksekliğini buluruz.
+
+
 \end{document}
 
